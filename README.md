@@ -44,7 +44,15 @@ Overall the analysis we discuss the data now here is finding some insight into B
 
 I have downloaded, extracted the files and used appropriate file-naming conventions.
 
-Firstly, I will clean the data for duplicate and error by using Excel.
+Firstly, I will clean the data below for duplicate and error by using Excel.
+- Daily_Activity_Merged
+- Daily_Sleep_Merged
+- Hourly_Steps_Merged
+- Hourly_Intensity_Merged
+- Hourly_Calories_Merged
+- Heart_Rate_Merged
+- Weight_Log_Merged
+
 The following steps were taken within each dataset:
 
 1. Sorted and filtered data by Id to obtain how many unique users there were within the dataset.
@@ -53,6 +61,12 @@ The following steps were taken within each dataset:
 4. Formatted all numerical data into Number format with either no decimals or up to 2 decimals.
 5. Add a new file in which we add Activity Column in Daily_Activity_Merged then save as a new file DailyActivity_Merged_Weekday. So,the formula below is used to add days names from the date we can easily analyze by days and weekends through this column:
 =CHOOSE(WEEKDAY(B2),"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
+
+After the cleaning process was done, there were only 3 rows in the Daily_Sleep_Merged file that had duplicate information.
+
+# Analyze
+
+After cleaning the data, I decided to use SQL instead of staying in Excel to analyze it (although I did go back a few times for visualizations).
 
 I am using Biguery for data analyses which is called Bigquery Sandbox and each files are uploaded each file one by one. 
 

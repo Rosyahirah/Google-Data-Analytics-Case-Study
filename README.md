@@ -57,7 +57,7 @@ The following steps were taken within each dataset:
 
 1. Sorted and filtered data by Id to obtain how many unique users there were within the dataset.
 2. Checked for duplicate data using the ‘duplicate data’ tool in Excel
-3. Formatted date data into MM/DD/YY date format
+3. Formatted date data.
 4. Formatted all numerical data into Number format with either no decimals or up to 2 decimals.
 5. Add a new file in which we add Activity Column in Daily_Activity_Merged then save as a new file DailyActivity_Merged_Weekday. So,the formula below is used to add days names from the date we can easily analyze by days and weekends through this column:
 =CHOOSE(WEEKDAY(B2),"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday")
@@ -66,7 +66,20 @@ After the cleaning process was done, there were only 3 rows in the Daily_Sleep_M
 
 # Analyze
 
-After cleaning the data, I decided to use SQL instead of staying in Excel to analyze it (although I did go back a few times for visualizations).
+After cleaning the data, I decided to use SQL to analyze the data.
+
+FitBit Fitness Tracker Data is uploaded into BigQuery under the project bellabeat-388609
+
+The following clean data sets are uploaded:
+
+dailyActivity_merged (dailyactive)
+dailyActivity_merged_Weekday
+sleepDay_merged (Sleepday)
+heartrate_seconds_merged
+hourlyCalroie_merged
+hourlyIntensity_merged
+hourlySteps_merged
+weightLogInfo_merged
 
 I am using Biguery for data analyses which is called Bigquery Sandbox and each files are uploaded each file one by one. 
 
